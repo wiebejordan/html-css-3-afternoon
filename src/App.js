@@ -1,26 +1,65 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
 
-function App() {
+class App extends Component{
+  constructor(props){
+    super(props);
+    this.state={
+      dropdownView: false
+    }
+  }
+  
+  toggleDropdown = () => {
+    this.setState({dropdownView: !this.state.dropdownView})
+  }
+  
+  
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <span className="header">Start Bootstrap</span>
+
+        <nav className='desktop-menu'>
+          <span>About</span>
+          <span>Projects</span>
+          <span>Contact</span>
+        </nav>
+        
+        <div className='dropdown' onClick={this.toggleDropdown}>
+          <span>Menu</span>
+          {/* <span className='hamburger'>|||</span>  */}
+        </div>
+
+        {this.state.dropdownView
+          ? (
+            
+            <nav id='mobile-menu'>
+              <span id='mobile-options'>
+              <span>About</span>
+              <span>Projects</span>
+              <span>Contact</span>
+              </span>
+
+              <span id='placeholder'></span>
+            </nav>
+            )
+            : null
+        }
+        
+        
       </header>
+
+      {/* <div>
+        <span>GRAYSCALE</span>
+        <span>A free, responsive, one page
+          Bootstrap theme created by Start Bootstrap.
+        </span>
+          <button>GET STARTED</button>
+      </div> */}
     </div>
   );
+  }
 }
 
 export default App;

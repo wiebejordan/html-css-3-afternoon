@@ -1,38 +1,94 @@
 .App {
-  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('./webpagebackground.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  height: 80px;
+  /* background-color: aquamarine; */
   display: flex;
-  flex-direction: column;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.header{
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.desktop-menu {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  box-sizing: border-box;
+}
+
+.dropdown {
+  display: none;
+}
+
+
+.mobile-menu {
+  display: none;
+}
+
+@media(max-width: 990px){
+  header{
+    background-color: rgb(71, 67, 67);
+    color: white;
   }
-  to {
-    transform: rotate(360deg);
+
+  .desktop-menu{
+    display: none;
   }
+
+    .dropdown {
+    display: initial;
+    height: 40px;
+    width: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: RGB(100, 161, 157);
+    border-style: solid;
+    border-radius: 5px;
+    font-size: 15px;
+    border-width: 1px;
+    
+  }
+
+  #mobile-menu{
+    display: initial;
+    box-sizing: border-box;
+    height: 120px;
+    width: 100vw;
+    position: fixed;
+    top: 79px;
+    background-color:rgb(71, 67, 67) ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    font-weight: lighter;
+    
+  }
+
+  #mobile-options {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding-right: 150px;
+    padding-bottom: 10px;
+  }
+
+  
+  
+  
 }
