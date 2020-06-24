@@ -4,6 +4,7 @@
   background-image: url('./webpagebackground.jpg');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   
 }
 
@@ -33,14 +34,71 @@ header {
 }
 
 
-.mobile-menu {
+#mobile-menu {
   display: none;
+}
+
+#mobile-options {
+  display: none;
+}
+
+#placeholder{
+  display: none;
+}
+
+.main {
+  height:calc(100vh - 80px);
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+
+.main h1 {
+  font-size: 110px;
+  box-sizing: border-box;
+  margin: -15px;
+  letter-spacing: 8px;
+  font-family: 'Times New Roman', Times, serif;
+  background: -webkit-linear-gradient(rgb(255, 255, 255), rgb(66, 66, 66));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 70%;
+}
+
+.main p {
+  width: 350px;
+  font-size: 20px;
+}
+
+.main button {
+  height: 45px;
+  width: 150px;
+  border-radius: 5px;
+  background-color: RGB(100, 161, 157);
+  color: white;
+  border: none;
+  text-shadow: 1px 1px  black;
+  margin-top: 20px;
+  margin-bottom: 100px;
+  
 }
 
 @media(max-width: 990px){
   header{
-    background-color: rgb(71, 67, 67);
-    color: white;
+    background-color: whitesmoke;
+    color: black;
+    z-index: 2;
+    animation: stretch;
+    animation-duration: 2s;
+    
+  }
+
+  .header{
+    z-index: 2;
   }
 
   .desktop-menu{
@@ -59,7 +117,8 @@ header {
     border-radius: 5px;
     font-size: 15px;
     border-width: 1px;
-    
+    z-index: 2;
+  
   }
 
   #mobile-menu{
@@ -69,12 +128,18 @@ header {
     width: 100vw;
     position: fixed;
     top: 79px;
-    background-color:rgb(71, 67, 67) ;
+    background-color:whitesmoke ;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-content: center;
     font-weight: lighter;
+    animation: drop;
+    animation-duration: 1s;
+    animation-duration: linear;
+    z-index: 1;
+    
+    
     
   }
 
@@ -86,9 +151,29 @@ header {
     box-sizing: border-box;
     padding-right: 150px;
     padding-bottom: 10px;
+    z-index: 2;
+    
   }
 
+  #placeholder{
+    display:initial;
+  }
   
+  .main {
+    
+  }
   
+}
+
+@media(max-width: 530px){
   
+}
+
+@keyframes drop {
+  from{
+    transform: translateY(-150px)
+  }
+  to{
+    transform: translateY(0)
+  }
 }

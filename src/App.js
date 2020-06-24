@@ -50,13 +50,16 @@ class App extends Component{
         
       </header>
 
-      {/* <div>
-        <span>GRAYSCALE</span>
-        <span>A free, responsive, one page
+      <div className='main'>
+        
+        <h1>GRAYSCALE</h1>
+        <p>A free, responsive, one page
           Bootstrap theme created by Start Bootstrap.
-        </span>
+        </p>
+        
           <button>GET STARTED</button>
-      </div> */}
+        
+      </div>
     </div>
   );
   }
