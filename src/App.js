@@ -5,13 +5,18 @@ class App extends Component{
   constructor(props){
     super(props);
     this.state={
-      dropdownView: false
+      dropdownView: false,
+      
+
     }
   }
   
   toggleDropdown = () => {
-    this.setState({dropdownView: !this.state.dropdownView})
+    this.setState({dropdownView: !this.state.dropdownView});
+    
   }
+
+  
   
   
   render(){
@@ -36,9 +41,9 @@ class App extends Component{
             
             <nav id='mobile-menu'>
               <span id='mobile-options'>
-              <span>About</span>
-              <span>Projects</span>
-              <span>Contact</span>
+              <span className='about'>About</span>
+              <span className='projects'>Projects</span>
+              <span className='contact'>Contact</span>
               </span>
 
               <span id='placeholder'></span>

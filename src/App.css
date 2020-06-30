@@ -5,6 +5,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: absolute;
   
 }
 
@@ -51,10 +52,12 @@ header {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: baseline;
   align-items: center;
   color: white;
   text-align: center;
+  padding-top: 125px;
+  
 }
 
 .main h1 {
@@ -75,7 +78,7 @@ header {
 }
 
 .main button {
-  height: 45px;
+  height: 55px;
   width: 150px;
   border-radius: 5px;
   background-color: RGB(100, 161, 157);
@@ -137,6 +140,7 @@ header {
     animation: drop;
     animation-duration: 1s;
     animation-duration: linear;
+    /* animation: up 1s linear;  */
     z-index: 1;
     
     
@@ -152,22 +156,44 @@ header {
     padding-right: 150px;
     padding-bottom: 10px;
     z-index: 2;
+    color: grey;
     
+  }
+
+ .about:hover {
+    color: black;
+  }
+
+  .projects:hover {
+    color: black;
+  }
+
+  .contact:hover {
+    color: black;
   }
 
   #placeholder{
     display:initial;
   }
   
-  .main {
-    
+  .main h1 {
+    font-size: 75px ;
   }
   
+  .main p {
+    font-size: 15px;
+  }
+
 }
 
-@media(max-width: 530px){
-  
+@media(max-width: 759px){
+  .main h1{
+    font-size: 50px;
+  }
+
 }
+
+
 
 @keyframes drop {
   from{
@@ -176,4 +202,14 @@ header {
   to{
     transform: translateY(0)
   }
+}
+
+@keyframes up {
+  from{
+    transform: translateY(0)
+  }
+  to{
+    transform: translateY(-150px)
+  }
+
 }
