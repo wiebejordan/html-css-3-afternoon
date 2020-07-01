@@ -138,8 +138,9 @@ header {
     align-content: center;
     font-weight: lighter;
     animation: drop;
-    animation-duration: 1s;
+    animation-duration: 500ms;
     animation-duration: linear;
+    animation-iteration-count: 1;
     /* animation: up 1s linear;  */
     z-index: 1;
     
@@ -204,12 +205,3 @@ header {
   }
 }
 
-@keyframes up {
-  from{
-    transform: translateY(0)
-  }
-  to{
-    transform: translateY(-150px)
-  }
-
-}
